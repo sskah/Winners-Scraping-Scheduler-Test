@@ -58,3 +58,6 @@ logs/
 # Ignora arquivos do sistema operacional
 .DS_Store
 Thumbs.db
+
+cannes_lions_winners.xlsx
+cannes_lions_winners.json
