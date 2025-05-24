@@ -62,7 +62,7 @@ logger.info(f"{total_categories} categorias encontradas.")
 excel_path = 'cannes_lions_winners.xlsx'
 if os.path.exists(excel_path):
     logger.info("Carregando dados existentes da planilha para evitar duplicatas...")
-    existing_df = pd.read_excel(excel_path)
+    existing_df = pd.read_excel('cannes_lions_winners.xlsx')
     existing_links = set(existing_df['Shortlist'].dropna().astype(str).tolist())
 else:
     existing_df = pd.DataFrame()
