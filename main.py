@@ -5,6 +5,7 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
+import openpyxl
 import json
 import os
 import math
@@ -62,7 +63,7 @@ logger.info(f"{total_categories} categorias encontradas.")
 excel_path = 'cannes_lions_winners.xlsx'
 if os.path.exists(excel_path):
     logger.info("Carregando dados existentes da planilha para evitar duplicatas...")
-    existing_df = pd.read_excel('cannes_lions_winners.xlsx')
+    existing_df = pd.read_excel(excel_path, engine='openpyxl')
     existing_links = set(existing_df['Shortlist'].dropna().astype(str).tolist())
 else:
     existing_df = pd.DataFrame()
