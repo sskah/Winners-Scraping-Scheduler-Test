@@ -141,7 +141,6 @@ for idx, link in enumerate(category_links, 1):
                     for i, val in enumerate(values):
                         row_dict[f'Coluna_{i+1}'] = val
 
-                row_dict['Shortlist'] = row_link
                 row_dict['Case'] = row_link
                 all_rows.append(row_dict)
                 existing_links.add(row_link)
