@@ -58,7 +58,3 @@ logs/
 # Ignora arquivos do sistema operacional
 .DS_Store
 Thumbs.db
-
-# Ignora planilhas geradas/atualizadas pelo script
-cannes_lions_winners.xlsx
-cannes_lions_winners.json
